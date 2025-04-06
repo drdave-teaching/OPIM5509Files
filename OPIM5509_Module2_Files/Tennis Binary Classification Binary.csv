@@ -1,0 +1,15 @@
+Day,Temp,Humidity,Wind,Play
+1,Hot,High,Weak,no
+2,Hot,High,Strong,no
+3,Hot,High,Weak,yes
+4,Cool,High,Weak,yes
+5,Cool,Normal,Weak,yes
+6,Cool,Normal,Strong,no
+7,Cool,Normal,Strong,yes
+8,Hot,High,Weak,no
+9,Cool,Normal,Weak,yes
+10,Cool,Normal,Weak,yes
+11,Cool,Normal,Strong,yes
+12,Cool,High,Strong,yes
+13,Hot,Normal,Weak,yes
+14,Cool,High,Strong,no
