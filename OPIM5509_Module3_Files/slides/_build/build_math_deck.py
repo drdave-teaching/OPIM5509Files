@@ -75,7 +75,7 @@ notes(s, 'Videos 4-6 of M3.1: Size & Trainable Parameters Pt 1-3.')
 s = blank(prs); header(s, 'Module 3.1 - Size & Trainable Parameters', 'The mission')
 pic_fit(s, MM + r'\s02_img3.png', 0.85, 2.1, 5.7, 4.2)
 pic_fit(s, MM + r'\s02_img4.png', 6.85, 2.35, 5.7, 2.8)
-text(s, 6.85, 5.5, 5.7, 1.1, [[('Given the code on the left, can you produce the summary on the right - every shape, every parameter count - BY HAND?', {'bold': True, 'size': 17})],
+text(s, 6.85, 5.5, 5.7, 1.1, [[('Given the code on the right, can you produce the summary on the left - every shape, every parameter count - BY HAND?', {'bold': True, 'size': 17})],
                               [('That is mastery. That is also the exam.', {'size': 15, 'color': GOLDT})]],
      size=17, color=INK, spacing=1.1)
 footer(s, 2); notes(s, 'Code <-> summary in both directions.')
@@ -103,8 +103,8 @@ for i, (a, b) in enumerate(rows):
     bx = rect(s, 0.85, y, 1.7, 0.7, DARK, shape=MSO_SHAPE.ROUNDED_RECTANGLE); bx.adjustments[0] = 0.25
     text(s, 0.85, y+0.13, 1.7, 0.5, a, size=22, color=SOFT, bold=True, align=PP_ALIGN.CENTER)
     text(s, 2.85, y+0.14, 9.6, 0.6, b, size=17, color=INK)
-tr = rect(s, 2.85, 6.55, 9.6, 0.55, GOLD, shape=MSO_SHAPE.ROUNDED_RECTANGLE); tr.adjustments[0] = 0.5
-text(s, 3.1, 6.65, 9.2, 0.4, "The L is the trap: from layer 2 on, L = the previous layer's F. Not RGB!", size=15, color=DARK, bold=True)
+tr = rect(s, 2.85, 6.28, 9.6, 0.55, GOLD, shape=MSO_SHAPE.ROUNDED_RECTANGLE); tr.adjustments[0] = 0.5
+text(s, 3.1, 6.38, 9.2, 0.4, "The L is the trap: from layer 2 on, L = the previous layer's F. Not RGB!", size=15, color=DARK, bold=True)
 footer(s, 4); notes(s, 'Same letters as the cheat sheet and the notebook. Drill L.')
 
 s = blank(prs); header(s, 'Module 3.1 - Size & Trainable Parameters', 'Only two formulas to rule them all')
@@ -112,7 +112,7 @@ card(s, 0.85, 2.15, 11.65, 1.75, 'output size (conv, no padding)')
 text(s, 1.2, 2.8, 11, 0.9, [[('new size = old size - (M - 1)', {'bold': True, 'size': 32, 'color': INK})],
                             [('shapes print as (BATCH, ROWS, COLS, CHANNELS) - batch is None until you fit; channels = that layer\'s F', {'size': 14, 'color': GREY})]], spacing=1.15)
 card(s, 0.85, 4.15, 11.65, 1.75, 'trainable parameters')
-text(s, 1.2, 4.8, 11, 0.9, [[('Conv2D:  ((M x N x L) + B) x F        Dense:  (n + 1) x m        Pooling / Flatten:  0', {'bold': True, 'size': 25, 'color': INK})],
+text(s, 1.2, 4.8, 11, 0.9, [[('Conv2D: ((M x N x L) + B) x F      Dense: (n + 1) x m      Pool/Flatten: 0', {'bold': True, 'size': 23, 'color': INK})],
                             [('pooling is naive - just max values, nothing to learn', {'size': 14, 'color': GREY})]], spacing=1.2)
 footer(s, 5); notes(s, 'Pt 1 anchor slide. Everything after is these two lines applied eight times.')
 
