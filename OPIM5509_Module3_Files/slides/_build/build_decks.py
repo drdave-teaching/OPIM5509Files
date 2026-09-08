@@ -362,5 +362,6 @@ for i, t in enumerate(recap):
 baseline(s)
 notes(s, 'Close the theory videos here; the math walkthrough continues in the next deck.')
 
-prs.save(os.path.join(OUT, 'ConvNet Theory and Terminology.pptx'))
+if os.environ.get('BUILD_THEORY') == '1':
+    prs.save(os.path.join(OUT, 'ConvNet Theory and Terminology.pptx'))  # guarded: BRANDED theory has manual edits (gif, slide 14/18, L/M captions)
 print('THEORY deck:', len(prs.slides.__iter__.__self__._sldIdLst), 'slides')
