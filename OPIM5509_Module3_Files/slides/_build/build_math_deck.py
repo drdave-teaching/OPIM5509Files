@@ -148,8 +148,8 @@ card(s, 0.85, 4.15, 11.65, 1.75, 'trainable parameters')
 text(s, 1.2, 4.8, 11, 0.9, [[('Conv2D: ((M x N x L) + B) x F      Dense: (n + 1) x m      Pool/Flatten: 0', {'bold': True, 'size': 23, 'color': INK})],
                             [('pooling is naive - just max values, nothing to learn', {'size': 14, 'color': GREY})]], spacing=1.2)
 wk = rect(s, 0.85, 6.05, 11.65, 0.72, DARK, shape=MSO_SHAPE.ROUNDED_RECTANGLE); wk.adjustments[0] = 0.3
-text(s, 1.2, 6.14, 11, 0.3, [[('WORKED:  ', {'bold': True, 'size': 15, 'color': SOFT}), ('28x28 image, 5x5 kernel, F=3  ->  size: 28 - (5-1) = 24, so (None,28,28,1) becomes (None,24,24,3)  ·  parms: ((5x5x1)+1)x3 = 78', {'size': 15, 'color': RGBColor(0xD2,0xD4,0xDC)})]], size=15)
-text(s, 1.2, 6.45, 11, 0.3, '"Size" = the rows/cols of the map. That little shrink IS the light downsampling. (Pooling does the aggressive kind: 24 / 2 = 12.)', size=14, color=SOFT, bold=True)
+text(s, 1.2, 6.14, 11.1, 0.3, [[('WORKED:  ', {'bold': True, 'size': 13, 'color': SOFT}), ('28x28 image, 5x5 kernel, F=3  ->  size: 28-(5-1)=24 -> (None,24,24,3)  ·  parms: ((5x5x1)+1)x3 = 78', {'size': 13, 'color': RGBColor(0xD2,0xD4,0xDC)})]], size=13)
+text(s, 1.2, 6.44, 11.1, 0.3, '"Size" = the rows/cols of the map. That little shrink IS the light downsampling. (Pooling is the aggressive kind: 24/2 = 12.)', size=13, color=SOFT, bold=True)
 footer(s, 5); notes(s, 'Pt 1 anchor slide. Everything after is these two lines applied eight times.')
 
 s = blank(prs); header(s, 'Module 3.1 - Size & Trainable Parameters', 'Reminder: what Conv2D is doing')
